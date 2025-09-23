@@ -60,7 +60,7 @@ public class RecruitmentViewCandidatesPages {
     // Job Title Dropdown
     //Локатор выпадающего списка (кликабельная часть)
     private By JobTitleBy() {
-        return By.cssSelector(".form div.oxd-grid-item:first-child div.oxd-select-wrapper");
+        return By.cssSelector("form div.oxd-grid-item:first-child div.oxd-select-wrapper");
     }
     public WebElement JobTitle(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(JobTitleBy()));
@@ -68,14 +68,14 @@ public class RecruitmentViewCandidatesPages {
     }
     //Локатор выпадающего списка (после клика)
     private By JobTitleBy1() {
-        return By.cssSelector(".div[role='listbox']");
+        return By.cssSelector("div[role='listbox']");
     }
     public WebElement JobTitle1(){
         return driver.findElement(JobTitleBy1());
     }
     //Локатор для выбора элемента
     private By TitleOptionByText() {
-        return By.cssSelector(".div[role='listbox']");
+        return By.cssSelector("div[role='listbox']");
     }
     public WebElement TitleOptionText(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(TitleOptionByText()));
@@ -83,7 +83,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор для отображения после выбора элемента
     private By selectedJobTitleValueBy() {
-        return By.cssSelector(".div[role='listbox']");
+        return By.cssSelector("div[role='listbox']");
     }
     public WebElement selectedJobTitleValue(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(selectedJobTitleValueBy()));

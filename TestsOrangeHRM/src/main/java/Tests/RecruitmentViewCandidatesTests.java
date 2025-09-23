@@ -72,8 +72,6 @@ public class RecruitmentViewCandidatesTests {
     @Test
     @DisplayName("Проверка выпадающего списка Job Title")
     public void testDropdownListJobTitle() {
-        // Убедимся, что мы на странице Recruitment
-        methods.OpenRecruitment();
 
         // Открываем выпадающий список Job Title
         methods.openJobTitleDropdown();
