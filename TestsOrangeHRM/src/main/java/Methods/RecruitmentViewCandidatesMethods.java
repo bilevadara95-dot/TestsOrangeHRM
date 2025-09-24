@@ -1,6 +1,6 @@
 package Methods;
+import StaticData.FilterCandidatesElements;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import Pages.RecruitmentViewCandidatesPages;
@@ -54,12 +54,9 @@ public class RecruitmentViewCandidatesMethods {
         pages.JobTitle().click();
     }
     // Выбираем элемент
-    public void selectJobTitleOption(){
-        pages.TitleOptionText().click();
-    }
-    // Проверяем правильность выбранного элемента
-    public String getSelectedJobTitleText() {
-        return pages.selectedJobTitleValue().getText();
+    public void selectJobTitleOption() {
+        String jobTitleToSelect = FilterCandidatesElements.jobTitlesMap.get(18); // "QA Engineer"
+        pages.getTitleOptionByText(jobTitleToSelect).click();
     }
     // Кликаем на кнопку поиска для проверки фильтрации по таблице
     public void clickSearchButton() {

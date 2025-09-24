@@ -74,27 +74,26 @@ public class RecruitmentViewCandidatesPages {
         return driver.findElement(JobTitleBy1());
     }
     //Локатор для выбора элемента
-    private By TitleOptionByText() {
-        return By.cssSelector("div[role='listbox']");
+    private By titleOptionByText(String text) {
+        return By.xpath("//div[@role='option']//span[text()='" + text + "']");
     }
-    public WebElement TitleOptionText(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(TitleOptionByText()));
-        return driver.findElement(TitleOptionByText());
-    }
-    // Локатор для отображения после выбора элемента
-    private By selectedJobTitleValueBy() {
-        return By.cssSelector("div[role='listbox']");
-    }
-    public WebElement selectedJobTitleValue(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(selectedJobTitleValueBy()));
-        return driver.findElement(selectedJobTitleValueBy());
+
+    public WebElement getTitleOptionByText(String text) {
+        By locator = titleOptionByText(text);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return driver.findElement(locator);
     }
     // Локатор для кнопки поиска, для применения фильтров
     private By searchButtonBy() {
-        return By.cssSelector(".div[role='listbox']");
+        return By.cssSelector("button.oxd-button--secondary.orangehrm-left-space[type='submit']");
     }
     public WebElement searchButton(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchButtonBy()));
         return driver.findElement(searchButtonBy());
     }
+
+    // Vacancy Dropdown
+    // Локатор выпадающего списка (кликабельная часть)
+
+
 }
