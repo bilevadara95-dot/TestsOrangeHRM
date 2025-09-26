@@ -107,8 +107,10 @@ public class RecruitmentViewCandidatesTests {
     public void testDropdownListHiringManager() {
 
         // Открываем выпадающий список Hiring Manager
+        methods.openHiringManagerDropdown();
 
         // Выбираем один элемент из выпадающего списка
+        methods.selectHiringManagerOption();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();

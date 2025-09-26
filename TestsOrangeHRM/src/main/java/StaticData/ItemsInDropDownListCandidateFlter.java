@@ -52,4 +52,11 @@ public class ItemsInDropDownListCandidateFlter {
         VacancyMap.put(7, "-- Software Engineer --");
         VacancyMap.put(8, "-- test --");
     }
+    public static final Map<Integer, String> HiringManagerMap = new HashMap<>();
+
+    static {
+        HiringManagerMap.put(0, "-- Select --");
+        HiringManagerMap.put(1, "-- Jon@$$$ Jon@$$$ --");
+        HiringManagerMap.put(2, "-- Rahul Patil --");
+    }
 }

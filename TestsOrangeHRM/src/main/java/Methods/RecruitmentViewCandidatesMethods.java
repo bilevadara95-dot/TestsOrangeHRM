@@ -75,4 +75,15 @@ public class RecruitmentViewCandidatesMethods {
          String VacancyToSelect = ItemsInDropDownListCandidateFlter.VacancyMap.get(5); // Senior QA Lead
         pages.VacancyText(VacancyToSelect).click();}
 
+    //  Методы для HiringManager
+    public void openHiringManagerDropdown() {
+        pages.HiringManager().click();
+    }
+    // Выбираем элемент
+    public void selectHiringManagerOption() {
+        String HiringManagerSelect = ItemsInDropDownListCandidateFlter.HiringManagerMap.get(2); // Senior QA Lead
+        pages.HiringManagerText(HiringManagerSelect).click();}
+
+
+
 }

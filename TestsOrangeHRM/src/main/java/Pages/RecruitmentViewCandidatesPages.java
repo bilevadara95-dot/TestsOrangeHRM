@@ -112,4 +112,22 @@ public class RecruitmentViewCandidatesPages {
         return driver.findElement(VacancyByText(text));
     }
 
+    // Hiring Manager
+    // Локатор выпадающего списка
+    private By HiringManagerBy() {
+        return By.cssSelector("form div.oxd-grid-item .oxd-select-wrapper .oxd-select-text");
+    }
+    public WebElement HiringManager(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(HiringManagerBy()));
+        return driver.findElement(HiringManagerBy());
+    }
+    // Локатор для выбора элемента из выпадающего списка
+    private By HiringManagerByText(String text) {
+        return By.xpath("////div[@role='listbox']//span[text()='" + text + "']");
+    }
+    public WebElement HiringManagerText(String text){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(HiringManagerByText(text)));
+        return driver.findElement(HiringManagerByText(text));
+    }
+
 }
