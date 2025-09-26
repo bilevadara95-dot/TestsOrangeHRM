@@ -1,5 +1,5 @@
 package Methods;
-import StaticData.FilterCandidatesElements;
+import StaticData.ItemsInDropDownListCandidateFlter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -55,13 +55,24 @@ public class RecruitmentViewCandidatesMethods {
     }
     // Выбираем элемент
     public void selectJobTitleOption() {
-        String jobTitleToSelect = FilterCandidatesElements.jobTitlesMap.get(18); // "QA Engineer"
+        String jobTitleToSelect = ItemsInDropDownListCandidateFlter.jobTitlesMap.get(18); // "QA Engineer"
         pages.getTitleOptionByText(jobTitleToSelect).click();
     }
     // Кликаем на кнопку поиска для проверки фильтрации по таблице
     public void clickSearchButton() {
         pages.searchButton().click();
-
     }
+    //Кликаем на кнопку очистки фильтрации
+    public void clickResetButton() {
+        pages.resetButton().click();
+    }
+    //--- Методы для Vacancy ---
+    public void openVacancyDropdown() {
+        pages.Vacancy().click();
+    }
+    // Выбираем элемент
+    public void selectVacancyOption() {
+         String VacancyToSelect = ItemsInDropDownListCandidateFlter.VacancyMap.get(5); // Senior QA Lead
+        pages.VacancyText(VacancyToSelect).click();}
 
 }

@@ -83,6 +83,7 @@ public class RecruitmentViewCandidatesTests {
         methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -90,12 +91,15 @@ public class RecruitmentViewCandidatesTests {
     public void testDropdownListVacancy() {
 
         // Открываем выпадающий список Vacancy
+        methods.openVacancyDropdown();
 
         // Выбираем один элемент из выпадающего списка
-
+        methods.selectVacancyOption();
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -107,8 +111,10 @@ public class RecruitmentViewCandidatesTests {
         // Выбираем один элемент из выпадающего списка
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -120,8 +126,10 @@ public class RecruitmentViewCandidatesTests {
         // Выбираем один элемент из выпадающего списка
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -131,6 +139,7 @@ public class RecruitmentViewCandidatesTests {
         // Вводим в поле любое значение
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Удаляем введенное значение и проверяем что вывод в таблице вернулся к исходному состоянию
 
@@ -143,6 +152,7 @@ public class RecruitmentViewCandidatesTests {
         // Вводим в поле любое значение
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Удаляем введенное значение и проверяем что вывод в таблице вернулся к исходному состоянию
 
@@ -157,20 +167,25 @@ public class RecruitmentViewCandidatesTests {
         // Выбираем текущую дату
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Выбираем дату из прошлого
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Выбираем дату из будущего
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Удаляем введенную дату из поля
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -182,32 +197,39 @@ public class RecruitmentViewCandidatesTests {
         // Выбираем текущую дату
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Выбираем дату из прошлого
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Выбираем дату из будущего
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Удаляем введенную дату из поля
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
     @DisplayName("Проверка выпадающего списка Method of Application")
-    public void testDropdownListMethodofApplication() {
+    public void testDropdownListMethodOfApplication() {
 
         // Открываем выпадающий список Method of Application
 
         // Выбираем один элемент из выпадающего списка
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
+        methods.clickSearchButton();
 
         // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 }

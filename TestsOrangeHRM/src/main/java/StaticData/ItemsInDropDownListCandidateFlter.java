@@ -3,7 +3,7 @@ package StaticData;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FilterCandidatesElements {
+public class ItemsInDropDownListCandidateFlter {
 
     public static final Map<Integer, String> jobTitlesMap = new HashMap<>();
 
@@ -37,5 +37,19 @@ public class FilterCandidatesElements {
         jobTitlesMap.put(26, "Support Specialist");
         jobTitlesMap.put(27, "VP - Client Services");
         jobTitlesMap.put(28, "VP - Sales & Marketing");
+    }
+
+    public static final Map<Integer, String> VacancyMap = new HashMap<>();
+
+    static {
+        VacancyMap.put(0, "-- Select --");
+        VacancyMap.put(1, "-- @@@ --");
+        VacancyMap.put(2, "-- Junior Account Assistant --");
+        VacancyMap.put(3, "-- Payroll Administrator --");
+        VacancyMap.put(4, "-- Sales Representative --");
+        VacancyMap.put(5, "-- Senior QA Lead --");
+        VacancyMap.put(6, "-- Senior Support Specialist --");
+        VacancyMap.put(7, "-- Software Engineer --");
+        VacancyMap.put(8, "-- test --");
     }
 }
