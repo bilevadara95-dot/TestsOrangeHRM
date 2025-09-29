@@ -184,7 +184,8 @@ public class RecruitmentViewCandidatesTests {
         //Кликаем на кнопку Clear в календаре
         methods.clickClearButton();
 
-        // Выбираем дату из прошлого (например 15 сентября)
+        // Выбираем дату из прошлого (например 15 августа)
+        methods.goToPrevMonth();
         methods.selectDate("15");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
