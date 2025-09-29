@@ -59,4 +59,21 @@ public class ItemsInDropDownListCandidateFlter {
         HiringManagerMap.put(1, "-- Jon@$$$ Jon@$$$ --");
         HiringManagerMap.put(2, "-- Rahul Patil --");
     }
+
+    public static final Map<Integer, String> StatusMap = new HashMap<>();
+
+    static {
+        StatusMap.put(0, "-- Select --");
+        StatusMap.put(1, "-- Application Initiated --");
+        StatusMap.put(2, "-- Shortlisted --");
+        StatusMap.put(3, "-- Rejected --");
+        StatusMap.put(4, "-- Interview --");
+        StatusMap.put(5, "-- Interview Passed --");
+        StatusMap.put(6, "-- Interview Failed --");
+        StatusMap.put(7, "-- Job Offered --");
+        StatusMap.put(8, "-- Offer Declined --");
+        StatusMap.put(9, "-- Hired --");
+
+    }
+
 }

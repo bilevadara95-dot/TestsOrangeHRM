@@ -124,8 +124,10 @@ public class RecruitmentViewCandidatesTests {
     public void testDropdownListStatus() {
 
         // Открываем выпадающий список Status
+        methods.openStatusDropdown();
 
         // Выбираем один элемент из выпадающего списка
+        methods.selectStatusOption();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
@@ -139,12 +141,13 @@ public class RecruitmentViewCandidatesTests {
     public void testListCandidateName() {
 
         // Вводим в поле любое значение
+        methods.enterCandidateName("Rahul Sharma");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Удаляем введенное значение и проверяем что вывод в таблице вернулся к исходному состоянию
-
+        // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
     }
 
     @Test
@@ -152,11 +155,13 @@ public class RecruitmentViewCandidatesTests {
     public void testListKeywords() {
 
         // Вводим в поле любое значение
+        methods.enterKeywords("QA");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Удаляем введенное значение и проверяем что вывод в таблице вернулся к исходному состоянию
+        // Кликаем на кнопку Reset для очистки фильтрации
+        methods.clickResetButton();
 
     }
 
@@ -165,29 +170,39 @@ public class RecruitmentViewCandidatesTests {
     public void testListFrom() {
 
         // Проверяем открытие календаря при клике на поле
+        methods.clickFrom();
 
         // Выбираем текущую дату
+        methods.clickTodayButton();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Выбираем дату из прошлого
+        // Кликаем на кнопку Close для выхода из календаря
+        methods.clickCloseButton();
+
+        //Кликаем на кнопку Clear в календаре
+        methods.clickClearButton();
+
+        // Выбираем дату из прошлого (например 15 сентября)
+        methods.selectDate("15");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Выбираем дату из будущего
+        // Выбираем дату из будущего (например 1 октября)
+        // Выбираем следующий месяц
+        methods.goToNextMonth();
+        methods.selectDate("1");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
         // Удаляем введенную дату из поля
+        methods.clickClearButton();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
-
-        // Кликаем на кнопку Reset для очистки фильтрации
-        methods.clickResetButton();
     }
 
     @Test

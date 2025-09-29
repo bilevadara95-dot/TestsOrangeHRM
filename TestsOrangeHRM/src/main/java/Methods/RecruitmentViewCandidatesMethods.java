@@ -84,6 +84,53 @@ public class RecruitmentViewCandidatesMethods {
         String HiringManagerSelect = ItemsInDropDownListCandidateFlter.HiringManagerMap.get(2); // Senior QA Lead
         pages.HiringManagerText(HiringManagerSelect).click();}
 
+    // Методы для Status
+    public void openStatusDropdown() {
+        pages.Status().click();
+    }
+    // Выбираем элемент
+    public void selectStatusOption() {
+        String StatusSelect = ItemsInDropDownListCandidateFlter.StatusMap.get(5); // Senior QA Lead
+        pages.StatusText(StatusSelect).click();
+    }
+
+    // Методы для поля Candidate Name
+    public void enterCandidateName(String CandidateName) {
+        pages.CandidateName().clear();
+        pages.CandidateName().sendKeys(CandidateName);
+    }
+
+    // Методы для поля Keywords
+    public void enterKeywords(String Keywords) {
+        pages.Keywords().clear();
+        pages.Keywords().sendKeys(Keywords);
+    }
+
+    // Методы для Date of Application-From
+    public void clickFrom() {
+        pages.From().click();
+    }
+    public void clickTodayButton() {
+        pages.TodayButton().click();
+    }
+    public void clickClearButton() {
+        pages.ClearButton().click();
+    }
+    public void clickCloseButton(){
+        pages.CloseButton().click();
+    }
+    public void selectDate(String day) {
+        pages.dateCellNumber(day).click();
+    }
+    public void goToNextMonth() {
+        pages.nextMonthButton().click();
+    }
+
+    public void goToPrevMonth() {
+        pages.prevMonthButton().click();
+    }
+
+
 
 
 }
