@@ -67,7 +67,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор для кнопки Reset для очистки фильтров
     private By resetButtonBy() {
-        return By.cssSelector("button.oxd-button oxd-button--medium oxd-button--ghost");
+        return By.cssSelector("button[type=\"reset\"]");
     }
     public WebElement resetButton(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(resetButtonBy()));
@@ -97,7 +97,7 @@ public class RecruitmentViewCandidatesPages {
     // Vacancy Dropdown
     // Локатор выпадающего списка (кликабельная часть)
     private By VacancyBy() {
-        return By.cssSelector("form div.oxd-grid-item .oxd-select-wrapper .oxd-select-text");
+        return By.xpath("//label[text()='Vacancy']//following::div[contains(@class, 'oxd-select-text')][1]");
     }
     public WebElement Vacancy(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(VacancyBy()));
@@ -105,7 +105,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор для выбора элемента из выпадающего списка
     private By VacancyByText(String text) {
-        return By.xpath("////div[@role='listbox']//span[text()='" + text + "']");
+        return By.xpath("//div[@role='listbox']//span[text()='" + text + "']");
     }
     public WebElement VacancyText(String text){
         wait.until(ExpectedConditions.visibilityOfElementLocated(VacancyByText(text)));
@@ -115,7 +115,7 @@ public class RecruitmentViewCandidatesPages {
     // Hiring Manager
     // Локатор выпадающего списка
     private By HiringManagerBy() {
-        return By.cssSelector("form div.oxd-grid-item .oxd-select-wrapper .oxd-select-text");
+        return By.xpath("//label[text()='Hiring Manager']//following::div[contains(@class, 'oxd-select-text')][1]");
     }
     public WebElement HiringManager(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(HiringManagerBy()));
@@ -133,7 +133,7 @@ public class RecruitmentViewCandidatesPages {
     // Status
     // Локатор выпадающего списка
     private By StatusBy() {
-        return By.cssSelector("form div.oxd-grid-item .oxd-select-wrapper .oxd-select-text");
+        return By.xpath("//label[text()='Status']//following::div[contains(@class, 'oxd-select-text')][1]");
     }
     public WebElement Status() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(StatusBy()));
@@ -226,6 +226,17 @@ public class RecruitmentViewCandidatesPages {
         wait.until(ExpectedConditions.visibilityOfElementLocated(prevMonthButtonBy()));
         return driver.findElement(prevMonthButtonBy());
     }
+    //Date of Application-To
+    // Локатор поля
+    private By ToBy() {
+        return By.cssSelector("input[placeholder='To']");
+    }
+    public WebElement To() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(ToBy()));
+        return driver.findElement(ToBy());
+    }
+
+
 
 
 }

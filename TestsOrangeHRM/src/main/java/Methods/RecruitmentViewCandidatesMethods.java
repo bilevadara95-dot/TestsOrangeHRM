@@ -130,6 +130,11 @@ public class RecruitmentViewCandidatesMethods {
         pages.prevMonthButton().click();
     }
 
+    // Методы для Date of Application-To
+    public void clickTo(){
+        pages.To().click();
+    }
+
 
 
 

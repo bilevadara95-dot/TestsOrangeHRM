@@ -61,6 +61,8 @@ public class RecruitmentViewCandidatesTests {
         }
     }
 
+    // Написать тесты на проверку таблицы по фильтрам, на каждый фильтр проверка таблицы по выводу
+
     @Test
     @DisplayName("Проверка URL страницы Candidates")
     public void testOpenRecruitment() {
@@ -184,14 +186,14 @@ public class RecruitmentViewCandidatesTests {
         //Кликаем на кнопку Clear в календаре
         methods.clickClearButton();
 
-        // Выбираем дату из прошлого (например 15 августа)
+        // Выбираем дату из прошлого (например 15 число предыдущего месяца)
         methods.goToPrevMonth();
         methods.selectDate("15");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Выбираем дату из будущего (например 1 октября)
+        // Выбираем дату из будущего (например 1 число следующего месяца)
         // Выбираем следующий месяц
         methods.goToNextMonth();
         methods.selectDate("1");
@@ -211,29 +213,40 @@ public class RecruitmentViewCandidatesTests {
     public void testListTo() {
 
         // Проверяем открытие календаря при клике на поле
+        methods.clickTo();
 
         // Выбираем текущую дату
+        methods.clickTodayButton();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Выбираем дату из прошлого
+        // Кликаем на кнопку Close для выхода из календаря
+        methods.clickCloseButton();
+
+        //Кликаем на кнопку Clear в календаре
+        methods.clickClearButton();
+
+        // Выбираем дату из прошлого (например 15 число предыдущего месяца)
+        methods.goToPrevMonth();
+        methods.selectDate("15");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
-        // Выбираем дату из будущего
+        // Выбираем дату из будущего (например 1 число следующего месяца)
+        // Выбираем следующий месяц
+        methods.goToNextMonth();
+        methods.selectDate("1");
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
 
         // Удаляем введенную дату из поля
+        methods.clickClearButton();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();
-
-        // Кликаем на кнопку Reset для очистки фильтрации
-        methods.clickResetButton();
     }
 
     @Test
