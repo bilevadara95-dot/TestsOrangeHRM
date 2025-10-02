@@ -43,37 +43,45 @@ public class ItemsInDropDownListCandidateFlter {
 
     static {
         VacancyMap.put(0, "-- Select --");
-        VacancyMap.put(1, "-- @@@ --");
-        VacancyMap.put(2, "-- Junior Account Assistant --");
-        VacancyMap.put(3, "-- Payroll Administrator --");
-        VacancyMap.put(4, "-- Sales Representative --");
-        VacancyMap.put(5, "-- Senior QA Lead --");
-        VacancyMap.put(6, "-- Senior Support Specialist --");
-        VacancyMap.put(7, "-- Software Engineer --");
-        VacancyMap.put(8, "-- test --");
+        VacancyMap.put(1, "@@@");
+        VacancyMap.put(2, "Junior Account Assistant");
+        VacancyMap.put(3, "Payroll Administrator");
+        VacancyMap.put(4, "Sales Representative");
+        VacancyMap.put(5, "Senior QA Lead");
+        VacancyMap.put(6, "Senior Support Specialist");
+        VacancyMap.put(7, "Software Engineer");
+        VacancyMap.put(8, "test");
     }
     public static final Map<Integer, String> HiringManagerMap = new HashMap<>();
 
     static {
         HiringManagerMap.put(0, "-- Select --");
-        HiringManagerMap.put(1, "-- Jon@$$$ Jon@$$$ --");
-        HiringManagerMap.put(2, "-- Rahul Patil --");
+        HiringManagerMap.put(1, "Jon@$$$ Jon@$$$");
+        HiringManagerMap.put(2, "Rahul Patil");
     }
 
     public static final Map<Integer, String> StatusMap = new HashMap<>();
 
     static {
         StatusMap.put(0, "-- Select --");
-        StatusMap.put(1, "-- Application Initiated --");
-        StatusMap.put(2, "-- Shortlisted --");
-        StatusMap.put(3, "-- Rejected --");
-        StatusMap.put(4, "-- Interview --");
-        StatusMap.put(5, "-- Interview Passed --");
-        StatusMap.put(6, "-- Interview Failed --");
-        StatusMap.put(7, "-- Job Offered --");
-        StatusMap.put(8, "-- Offer Declined --");
-        StatusMap.put(9, "-- Hired --");
+        StatusMap.put(1, "Application Initiated");
+        StatusMap.put(2, "Shortlisted");
+        StatusMap.put(3, "Rejected");
+        StatusMap.put(4, "Interview");
+        StatusMap.put(5, "Interview Passed");
+        StatusMap.put(6, "Interview Failed");
+        StatusMap.put(7, "Job Offered");
+        StatusMap.put(8, "Offer Declined");
+        StatusMap.put(9, "Hired");
 
+    }
+
+    public static final Map<Integer, String> MethodOfApplicationMap = new HashMap<>();
+
+    static {
+        MethodOfApplicationMap.put(0, "-- Select --");
+        MethodOfApplicationMap.put(1, "Manual");
+        MethodOfApplicationMap.put(2, "Online");
     }
 
 }

@@ -123,7 +123,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор для выбора элемента из выпадающего списка
     private By HiringManagerByText(String text) {
-        return By.xpath("////div[@role='listbox']//span[text()='" + text + "']");
+        return By.xpath("//div[@role='listbox']//span[text()='" + text + "']");
     }
     public WebElement HiringManagerText(String text){
         wait.until(ExpectedConditions.visibilityOfElementLocated(HiringManagerByText(text)));
@@ -141,7 +141,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор для выбора элемента из выпадающего списка
     private By StatusByText(String text) {
-        return By.xpath("////div[@role='listbox']//span[text()='" + text + "']");
+        return By.xpath("//div[@role='listbox']//span[text()='" + text + "']");
     }
     public WebElement StatusText(String text){
         wait.until(ExpectedConditions.visibilityOfElementLocated(StatusByText(text)));
@@ -234,6 +234,24 @@ public class RecruitmentViewCandidatesPages {
     public WebElement To() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(ToBy()));
         return driver.findElement(ToBy());
+    }
+
+    //Method of Application
+    // Локатор для выпадающего списка
+    private By MethodOfApplicationBy(){
+        return By.xpath("//label[text()='Method of Application']//following::div[contains(@class, 'oxd-select-text')][1]");
+    }
+    public WebElement MethodOfApplication(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MethodOfApplicationBy()));
+        return driver.findElement(MethodOfApplicationBy());
+    }
+    // Локатор для выбора элемента из выпадающего списка
+    private By MethodOfApplicationByText(String text) {
+        return By.xpath("//div[@role='listbox']//span[text()='" + text + "']");
+    }
+    public WebElement MethodOfApplicationText(String text){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(MethodOfApplicationByText(text)));
+        return driver.findElement(MethodOfApplicationByText(text));
     }
 
 

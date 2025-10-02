@@ -254,8 +254,10 @@ public class RecruitmentViewCandidatesTests {
     public void testDropdownListMethodOfApplication() {
 
         // Открываем выпадающий список Method of Application
+        methods.clickMethodOfApplication();
 
         // Выбираем один элемент из выпадающего списка
+        methods.selectMethodOfApplicationOption();
 
         // Кликаем на кнопку поиска для проверки фильтрации по таблице
         methods.clickSearchButton();

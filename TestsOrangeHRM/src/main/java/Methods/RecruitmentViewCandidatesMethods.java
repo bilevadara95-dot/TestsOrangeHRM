@@ -135,6 +135,15 @@ public class RecruitmentViewCandidatesMethods {
         pages.To().click();
     }
 
+    // Методы для Method of Application
+    public void clickMethodOfApplication(){
+        pages.MethodOfApplication().click();
+    }
+    public void selectMethodOfApplicationOption() {
+        String MethodOfApplicationSelect = ItemsInDropDownListCandidateFlter.MethodOfApplicationMap.get(1); // Senior QA Lead
+        pages.MethodOfApplicationText(MethodOfApplicationSelect).click();
+    }
+
 
 
 
