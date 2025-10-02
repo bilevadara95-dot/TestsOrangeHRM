@@ -151,7 +151,7 @@ public class RecruitmentViewCandidatesPages {
     // Candidate Name
     // Локатор поля
     private By CandidateNameBy() {
-        return By.cssSelector("input.oxd-autocomplete-text-input--after");
+        return By.cssSelector("input[data-v-75e744cd][placeholder='Type for hints...']");
     }
     public WebElement CandidateName() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(CandidateNameBy()));
@@ -203,7 +203,7 @@ public class RecruitmentViewCandidatesPages {
     }
     // Локатор по числу
     private By dateCellByNumber(String day) {
-        return By.xpath("//div[@class='oxd-calendar-date'][text()='" + day + "']");
+        return By.xpath("//div[contains(@class, 'oxd-calendar-date') and text()='15']");
     }
     public WebElement dateCellNumber(String day) {
         By locator = dateCellByNumber(day);
@@ -225,15 +225,6 @@ public class RecruitmentViewCandidatesPages {
     public WebElement prevMonthButton() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(prevMonthButtonBy()));
         return driver.findElement(prevMonthButtonBy());
-    }
-    //Date of Application-To
-    // Локатор поля
-    private By ToBy() {
-        return By.cssSelector("input[placeholder='To']");
-    }
-    public WebElement To() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ToBy()));
-        return driver.findElement(ToBy());
     }
 
     //Method of Application

@@ -106,7 +106,7 @@ public class RecruitmentViewCandidatesMethods {
         pages.Keywords().sendKeys(Keywords);
     }
 
-    // Методы для Date of Application-From
+    // Методы для Date of Application-From-To
     public void clickFrom() {
         pages.From().click();
     }
@@ -128,11 +128,6 @@ public class RecruitmentViewCandidatesMethods {
 
     public void goToPrevMonth() {
         pages.prevMonthButton().click();
-    }
-
-    // Методы для Date of Application-To
-    public void clickTo(){
-        pages.To().click();
     }
 
     // Методы для Method of Application

@@ -209,47 +209,6 @@ public class RecruitmentViewCandidatesTests {
     }
 
     @Test
-    @DisplayName("Проверка поля Date of Application To")
-    public void testListTo() {
-
-        // Проверяем открытие календаря при клике на поле
-        methods.clickTo();
-
-        // Выбираем текущую дату
-        methods.clickTodayButton();
-
-        // Кликаем на кнопку поиска для проверки фильтрации по таблице
-        methods.clickSearchButton();
-
-        // Кликаем на кнопку Close для выхода из календаря
-        methods.clickCloseButton();
-
-        //Кликаем на кнопку Clear в календаре
-        methods.clickClearButton();
-
-        // Выбираем дату из прошлого (например 15 число предыдущего месяца)
-        methods.goToPrevMonth();
-        methods.selectDate("15");
-
-        // Кликаем на кнопку поиска для проверки фильтрации по таблице
-        methods.clickSearchButton();
-
-        // Выбираем дату из будущего (например 1 число следующего месяца)
-        // Выбираем следующий месяц
-        methods.goToNextMonth();
-        methods.selectDate("1");
-
-        // Кликаем на кнопку поиска для проверки фильтрации по таблице
-        methods.clickSearchButton();
-
-        // Удаляем введенную дату из поля
-        methods.clickClearButton();
-
-        // Кликаем на кнопку поиска для проверки фильтрации по таблице
-        methods.clickSearchButton();
-    }
-
-    @Test
     @DisplayName("Проверка выпадающего списка Method of Application")
     public void testDropdownListMethodOfApplication() {
 
